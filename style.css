@@ -11,16 +11,17 @@ ul {
 }
 
 li {
-    font-size: 1.3rem;
+    font-size: 130%;
     margin-bottom: 0.25rem;
 }
 
 .class-container {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     gap: 30px;
 }
 
@@ -55,19 +56,91 @@ li {
     color: #ffeac9;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1350px) {
+    li {
+        font-size: 1.7rem;
+    }
+
     .class-container {
         flex-direction: column;
     }
-        
+
     .class {
-        display: flex;
-        flex-wrap: nowrap;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: 90%;
         max-height: 300px;
-        flex-grow: 1;
+    }
+
+    .class-title {
+        font-size: 4rem;
+    }
+
+    .class-subtitle {
+        font-size: 2.5rem;
+    }
+
+    .class-button {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 0.4rem;
+    }
+}
+
+@media (max-width: 720px) {
+    li {
+        font-size: 2.2rem;
+    }
+
+    .class-container {
+        gap: 1.5rem;
+    }
+
+    .class {
+        min-height: 300px;
+        max-height: none;
+        min-width: 0;
+        max-width: 90%;
+        padding: 15px 15px 25px 15px;
+        font-size: 0.95rem;
+    }
+
+    .class-title {
+        font-size: 5.5rem;
+    }
+
+    .class-subtitle {
+        font-size: 3rem;
+    }
+
+    .class-button {
+        font-size: 1.6rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    li {
+        font-size: 1.3rem;
+    }
+
+    .class-container {
+        gap: 1rem;
+    }
+
+    .class {
+        min-height: 0;
+    }
+
+    .class-title {
+        font-size: 3rem;
+    }
+
+    .class-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .class-button {
+        font-size: 1.2rem;
+        padding: 0.25rem;
     }
 }
